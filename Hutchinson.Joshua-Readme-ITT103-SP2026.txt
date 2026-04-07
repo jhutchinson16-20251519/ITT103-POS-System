@@ -1,7 +1,7 @@
 Authors: Joshua Hutchinson
 Date Created: 2026-03-29
 Course: ITT103
-GitHub Public URL to Code: https://github.com/[your-username]/[repo-name]
+GitHub Public URL to Code: https://github.com/jhutchinson16-20251519/ITT103-POS-System
 
 PURPOSE
 This program is a Point of Sale system for a store called Best Buy Retail Store.
