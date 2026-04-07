@@ -1,0 +1,81 @@
+Authors: Joshua Hutchinson
+Date Created: 2026-03-29
+Course: ITT103
+GitHub Public URL to Code: https://github.com/[your-username]/[repo-name]
+
+PURPOSE
+This program is a Point of Sale system for a store called Best Buy Retail Store.
+It lets a cashier add and remove items from a cart, calculate the total with tax,
+take payment from the customer, and print a receipt. It also gives a warning when
+items are running low in stock and applies a discount if the bill is over $5000.
+
+HOW TO RUN
+Make sure Python 3 is installed on your computer.
+Open a terminal or command prompt, go to the folder with the file, and run:
+    python Lastname.Firstname-POS-ITT103-SP2026.py
+Then just follow the menu on the screen.
+
+PROGRAM MODIFICATIONS
+
+catalog (dictionary)
+  - Stores 12 products with their price and stock quantity.
+  - Stock gets updated as items are added or removed from the cart.
+
+show_menu()
+  - Prints the main cashier menu with all the options.
+
+show_catalog()
+  - Lists all products with price and stock.
+  - Shows a LOW warning if stock is below 5.
+
+show_cart(cart)
+  - Shows everything currently in the cart with quantities and prices.
+
+add_item(cart)
+  - Asks for a product name and quantity.
+  - Checks that the product exists and that there is enough stock.
+  - Updates the catalog stock right away when item is added.
+
+remove_item(cart)
+  - Lets the cashier remove some or all of an item from the cart.
+  - Puts the stock back in the catalog when removed.
+
+get_subtotal(cart)
+  - Adds up all the item totals to get the subtotal.
+
+get_totals(cart)
+  - Calculates the subtotal, discount (if over $5000), tax (10%), and total due.
+
+get_payment(total_due)
+  - Asks for the amount paid by the customer.
+  - Wont accept it if the amount is less than the total.
+
+print_receipt(cart, subtotal, discount, tax, total_due, paid, trans_id)
+  - Prints a full receipt with all the transaction details and a thank you message.
+
+checkout(cart, trans_id)
+  - Runs through the whole checkout process from showing the cart to printing the receipt.
+
+check_low_stock()
+  - Checks all products and prints a list of any that are below 5 units.
+
+main()
+  - Runs the main loop and handles all the menu choices.
+  - Supports multiple transactions in one session.
+  - Restores stock if a transaction is cancelled or the program exits with items in the cart.
+
+ASSUMPTIONS
+- All prices are in Jamaican Dollars (JMD).
+- Tax is always 10%.
+- A 5% discount is given when the bill is over $5000.
+- Product names are not case sensitive when typing them in.
+- Stock does not save between sessions, it resets every time the program is ran.
+
+LIMITATIONS
+- No database, everything is stored in memory while the program is running.
+- Only one user can use the system at a time.
+- You cannot add new products while the program is running.
+- Receipts only print to the screen, they are not saved to a file.
+
+"I CERTIFY THAT I HAVE NOT GIVEN OR RECEIVED ANY UNAUTHORIZED ASSISTANCE ON THIS ASSIGNMENT"
+Electronic Signature: Joshua Hutchinson
